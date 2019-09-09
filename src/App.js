@@ -12,11 +12,12 @@ function App() {
   return (
     <div className="container">
       <section className="scoreboard">
-        <div className="topRow">
+        {/* <div className="topRow">
          <Club place="home" clubName = "Lions" score={homeScore}/>
           <div className="timer">00:03</div>
          <Club place="away" clubName="Tigers" score={awayScore}/>
-        </div>
+        </div> */}
+        <TopRow/>
         <BottomRow />
       </section>
       <section className="buttons">
@@ -40,6 +41,16 @@ function App() {
       </section>
     </div>
   );
+}
+
+function TopRow(){
+  return (
+    <div className="topRow">
+         <Club place="home" clubName = "Lions" score={homeScore}/>
+          <div className="timer">00:03</div>
+         <Club place="away" clubName="Tigers" score={awayScore}/>
+        </div>
+  )
 }
 
 
