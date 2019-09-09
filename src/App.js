@@ -17,7 +17,7 @@ function App() {
           <div className="timer">00:03</div>
          <Club place="away" clubName="Tigers" score={awayScore}/>
         </div> */}
-        <TopRow/>
+        <TopRow homeScore={homeScore} awayScore={awayScore}/>
         <BottomRow />
       </section>
       <section className="buttons">
@@ -43,12 +43,12 @@ function App() {
   );
 }
 
-function TopRow(){
+function TopRow(props){
   return (
     <div className="topRow">
-         <Club place="home" clubName = "Lions" score={homeScore}/>
+         <Club place="home" clubName = "Lions" score={props.homeScore}/>
           <div className="timer">00:03</div>
-         <Club place="away" clubName="Tigers" score={awayScore}/>
+         <Club place="away" clubName="Tigers" score={props.awayScore}/>
         </div>
   )
 }
